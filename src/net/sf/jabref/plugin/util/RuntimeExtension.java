@@ -95,4 +95,8 @@ public class RuntimeExtension extends ParameterAccessor implements Extension  {
 		return wrapped.getDocumentation();
 	}
 
+	public boolean isOptional() {
+		return false;
+	}
+
 }
