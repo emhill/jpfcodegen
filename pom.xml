@@ -18,13 +18,6 @@
 		</license>
 	</licenses>
 
-	<repositories>
-		<repository>
-			<id>labes-pc-010808-releases</id>
-			<url>http://www.ironiacorp.com/Apps/Artifactory/repo</url>
-		</repository>
-	</repositories>
-
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -63,14 +56,16 @@
 		<outputDirectory>target/classes</outputDirectory>
 		<testOutputDirectory>target/test-classes</testOutputDirectory>
 
-                <resources>
-                        <resource>
-                                <directory>${project.basedir}/resources</directory>
-                                <filtering>true</filtering>
-                        </resource>
-                </resources>
+		<resources>
+			<resource>
+				<directory>${project.basedir}</directory>
+				<includes>
+					<include>**/*.vm</include>
+				</includes>
+			</resource>
+		</resources>
 
-		<plugins>
+       		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
